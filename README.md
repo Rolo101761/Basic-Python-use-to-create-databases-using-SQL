@@ -28,8 +28,22 @@ See: [Enzyme-Digestion-Step-by-Step-Pipeline](https://github.com/Rolo101761/Enzy
 
 ---
 
-### 3. miRNA QC Pipeline *(code coming soon)*
-See: [miRNA-QC-Pipeline](https://github.com/Rolo101761/miRNA-QC-Pipeline)
+### 3. miRNA QC Pipeline
+**`portfolio_projects/miRNA_QC_pipeline/`**
+
+Quality control pipeline for miRNA–gene–disease association datasets.
+
+- Filters by `rna2locus_conf_score` and `gene2disease_conf_score` thresholds
+- Prints descriptive statistics (mean, std, median, min, max) before and after QC
+- Reports top 3 organisms post-QC
+- Generates distribution histograms and organism bar chart
+- **Skills:** Python, pandas, matplotlib, argparse, non-coding RNA biology
+
+```bash
+python portfolio_projects/miRNA_QC_pipeline/miRNA_QC_pipeline.py \
+  --input data.csv --output filtered.tsv \
+  --rna2locus-threshold 0.7 --gene2disease-threshold 0.7 --fig-dir figures/
+```
 
 ---
 
