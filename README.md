@@ -38,13 +38,12 @@ See: [miRNA-QC-Pipeline](https://github.com/Rolo101761/miRNA-QC-Pipeline)
 
 Monte Carlo simulation of histone methylation spreading using a writer/eraser model.
 
-- 1D chromatin fibre model with periodic boundary conditions
-- Cooperative spreading rules (writer probability scales with neighbour methylation state)
-- Constitutive erasure, autonomous writer noise
-- Parameter sweep to explore phase space (hypermethylated vs euchromatin-like regimes)
-- HWHM-based spreading length quantification
-- ggplot2 visualisations: methylation profile, timeseries, parameter sweep heatmap
-- **Skills:** R, ggplot2, epigenomics, Monte Carlo simulation, stochastic modelling
+- Built with [GenomicLayers](https://github.com/davetgerrard/GenomicLayers) (Gerrard, *BMC Bioinformatics* 2025) — sequence-informed epigenome simulation
+- Writer (H3K4me3-like) and eraser/repressive writer (PRC2/H3K27me3-like) binding factors on *S. cerevisiae* chrI
+- Tracks active, repressive, and bivalent chromatin states per simulation cycle
+- Chromosome-wide mark distribution profile at 5 kb resolution
+- Parameter sweep: stateWidth × cycles heatmap
+- **Skills:** R, GenomicLayers, ggplot2, Bioconductor, epigenomics, stochastic modelling
 
 ```bash
 Rscript portfolio_projects/rules_based_simulation/rules_based_simulation.R
@@ -78,7 +77,7 @@ for the full architecture, R code snippets, and dashboard design.
 |-------|---------|
 | Python | All projects |
 | SQL / SQLite | Bioinformatics DB, RNA-seq pipeline |
-| R (ggplot2, DESeq2, clusterProfiler) | Rules-Based Simulation, Flagship RNA-seq |
+| R (GenomicLayers, ggplot2, DESeq2, clusterProfiler) | Rules-Based Simulation, Flagship RNA-seq |
 | Power BI / Tableau | Flagship RNA-seq |
 | Mass spectrometry / proteomics | Enzyme Digestion Pipeline |
 | Epigenomics / stochastic modelling | Rules-Based Simulation |
