@@ -1,0 +1,6 @@
+data/raw/
+data/processed/*.csv
+data/processed/*.tsv
+data/processed/dashboard_exports/
+database/*.db
+figures/*.png
