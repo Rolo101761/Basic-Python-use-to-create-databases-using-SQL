@@ -23,7 +23,6 @@ Histograms / unique protein counts  (4 analysis modes)
 ## Scripts
 
 ### Task 1 — ORF Finder (`task1_orf_finder.py`)
-*Hannah Ehrlich (14226716)*
 
 Finds all open reading frames in all 6 reading frames (3 forward, 3 reverse complement) of a DNA FASTA file.
 

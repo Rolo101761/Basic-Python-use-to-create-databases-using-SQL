@@ -1,7 +1,6 @@
 #script to input a fasta file of multiple sequences or a genome and output a fasta file
 #containing multiple open reading frames (of a user defined minimum size) with the header line containing
 #the orf name, the frame it's in, the length of the orf, and the start position in the sequence
-#created by Hannah Ehrlich (14226716)
 import re, sys, os
 import argparse
 #function to read in fasta file and create dictionary of sequences and list of names
