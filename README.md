@@ -23,40 +23,13 @@ python portfolio_projects/bioinformatics_sql_db/bioinformatics_db.py --demo
 
 ---
 
-### 2. Enzyme Digestion Pipeline
-**`portfolio_projects/enzyme_digestion_pipeline/`**
-
-Pure-Python in-silico proteomics pipeline (no external dependencies).
-
-- 6-frame ORF detection from bacterial genome FASTA
-- Enzyme digestion: Trypsin, Lys-C, Arg-C, Glu-C with missed cleavage support
-- Monoisotopic/average mass calculation, m/z values (+1 charge)
-- Ion statistics: identifies the best protease for unambiguous protein identification
-- **Skills:** Python, mass spectrometry, proteomics, algorithm design
-
-```bash
-python portfolio_projects/enzyme_digestion_pipeline/enzyme_digestion_pipeline.py \
-    --fasta genome.fasta --enzyme all --mz_min 1000 --mz_max 1500
-```
+### 2. Enzyme Digestion Pipeline *(code coming soon)*
+See: [Enzyme-Digestion-Step-by-Step-Pipeline](https://github.com/Rolo101761/Enzyme-Digestion-Step-by-Step-Pipeline)
 
 ---
 
-### 3. miRNA QC Pipeline
-**`portfolio_projects/miRNA_QC_pipeline/`**
-
-Quality control and analysis tool for miRNA–gene–disease association datasets
-(compatible with miRTarBase, HMDD, and similar TSV-format databases).
-
-- Confidence-score filtering, incomplete entry removal
-- Summary statistics: unique miRNAs, genes, diseases, confidence distribution
-- Top organisms and top target genes by association count
-- Cleaned TSV output ready for downstream analysis
-- **Skills:** Python, data QC, non-coding RNA biology, CSV/TSV processing
-
-```bash
-python portfolio_projects/miRNA_QC_pipeline/miRNA_QC_pipeline.py \
-    --input associations.tsv --confidence 0.7
-```
+### 3. miRNA QC Pipeline *(code coming soon)*
+See: [miRNA-QC-Pipeline](https://github.com/Rolo101761/miRNA-QC-Pipeline)
 
 ---
 
@@ -70,14 +43,14 @@ Monte Carlo simulation of histone methylation spreading using a writer/eraser mo
 - Constitutive erasure, autonomous writer noise
 - Parameter sweep to explore phase space (hypermethylated vs euchromatin-like regimes)
 - HWHM-based spreading length quantification
-- **Skills:** Python, epigenomics, Monte Carlo simulation, stochastic modelling
+- ggplot2 visualisations: methylation profile, timeseries, parameter sweep heatmap
+- **Skills:** R, ggplot2, epigenomics, Monte Carlo simulation, stochastic modelling
 
 ```bash
-python portfolio_projects/rules_based_simulation/rules_based_simulation.py \
-    --nucleosomes 200 --steps 50000 --p_write 0.08 --p_erase 0.02
+Rscript portfolio_projects/rules_based_simulation/rules_based_simulation.R
 
 # Parameter sweep across p_write x p_erase space
-python portfolio_projects/rules_based_simulation/rules_based_simulation.py --sweep
+Rscript portfolio_projects/rules_based_simulation/rules_based_simulation.R --sweep
 ```
 
 ---
@@ -105,7 +78,7 @@ for the full architecture, R code snippets, and dashboard design.
 |-------|---------|
 | Python | All projects |
 | SQL / SQLite | Bioinformatics DB, RNA-seq pipeline |
-| R (DESeq2, clusterProfiler, ggplot2) | Flagship RNA-seq |
+| R (ggplot2, DESeq2, clusterProfiler) | Rules-Based Simulation, Flagship RNA-seq |
 | Power BI / Tableau | Flagship RNA-seq |
 | Mass spectrometry / proteomics | Enzyme Digestion Pipeline |
 | Epigenomics / stochastic modelling | Rules-Based Simulation |
@@ -116,7 +89,7 @@ for the full architecture, R code snippets, and dashboard design.
 
 ## Running the projects
 
-All Python projects require **Python 3.8+** and **no external dependencies** unless stated.
+Python projects require **Python 3.8+**. R scripts require **R 4.0+** with `ggplot2` and `reshape2`.
 
 ```bash
 # Clone and explore
@@ -126,6 +99,6 @@ cd Basic-Python-use-to-create-databases-using-SQL
 # Run the database demo
 python portfolio_projects/bioinformatics_sql_db/bioinformatics_db.py --demo
 
-# Run the epigenome simulation
-python portfolio_projects/rules_based_simulation/rules_based_simulation.py --nucleosomes 100 --steps 10000
+# Run the epigenome simulation (R)
+Rscript portfolio_projects/rules_based_simulation/rules_based_simulation.R
 ```
